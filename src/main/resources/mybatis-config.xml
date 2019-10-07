@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="me.girrow.hotel.vo.RoomListInfoVO"
+			alias="RoomListInfoVO" />
+		<typeAlias type="me.girrow.hotel.vo.EventVO" alias="EventVO" />
+		<typeAlias type="me.girrow.hotel.vo.RoomVO" alias="RoomVO" />
+		<typeAlias type="me.girrow.hotel.vo.UserVO" alias="UserVO" />
+		<typeAlias type="me.girrow.hotel.vo.UserDTO" alias="UserDTO" />
+		<typeAlias type="me.girrow.hotel.vo.SmalltalkVO"
+			alias="SmalltalkVO" />
+		<typeAlias type="me.girrow.hotel.vo.SmalltalkDTO"
+			alias="SmalltalkDTO" />
+		<typeAlias type="me.girrow.hotel.vo.ReservationDTO"
+			alias="ReservationDTO" />
+		<typeAlias type="me.girrow.hotel.vo.ReservationNewDTO"
+			alias="ReservationNewDTO" />
+	</typeAliases>
+</configuration>

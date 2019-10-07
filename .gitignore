@@ -1,0 +1,8 @@
+/.classpath
+/.project
+/.settings/
+/.springBeans
+/README.md
+/target/
+/src/main/webapp/resources/
+/src/main/webapp/WEB-INF/views/index.jsp

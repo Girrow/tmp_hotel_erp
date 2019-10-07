@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.girrow.hotel.mapper.PostMapper">
+		<select id="getListSize" resultType="Integer">
+		SELECT COUNT(*) as cnt
+		  FROM `h_smalltalk`
+		</select>
+		<select id="selectAllData" parameterType="me.girrow.hotel.util.Pagination" resultType="SmalltalkVO">
+		SELECT *
+		  FROM `h_smalltalk`
+		 WHERE delYn='N'
+		 order by no desc
+		 LIMIT #{index},#{listCnt}
+	</select>
+	
+	<select id="selectOneData" resultType="SmalltalkVO">
+		SELECT *
+		  FROM `h_smalltalk`
+		 WHERE delYn='N' and no=#{key}
+	</select>
+	
+	<insert id="create" parameterType="SmalltalkDTO">
+		INSERT INTO `h_smalltalk`(title,content,writer,`selectedType`)
+		VALUES (#{title},#{content},#{writer},#{selectedType})
+	</insert>
+	
+	<update id="update">
+		UPDATE `h_smalltalk`
+		SET title=#{title} , content =#{content}
+		 WHERE writer=#{writer} and no=#{no}
+	</update>
+	
+	<delete id="delete">
+		UPDATE `h_smalltalk`
+		SET delYn='Y'
+		 WHERE writer=#{writer} and no=#{title}
+	</delete>
+</mapper>
